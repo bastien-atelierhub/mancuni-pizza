@@ -132,7 +132,7 @@ export default function Home() {
             {/* Right: Image */}
             <motion.div 
               {...fadeIn}
-              className="relative aspect-[4/5] md:aspect-square rounded-2xl overflow-hidden shadow-2xl"
+              className="relative aspect-[4/5] md:aspect-square"
             >
               <img
                 src="/assets/3ingredients.png"
@@ -146,7 +146,10 @@ export default function Home() {
         {/* ═══ SECTION 4 — IL MENÙ ═══ */}
         <section id="menu" className="relative bg-background pt-8 pb-[350px] md:pb-36 px-6 md:px-12 lg:px-24 overflow-hidden">
           {/* Aesthetic Background Filler for the empty space next to the 7th pizza */}
-          <div className="absolute bottom-0 right-0 w-[150%] md:w-[90%] lg:w-[70%] max-w-[1100px] h-[400px] md:h-[700px] pointer-events-none z-0">
+          <motion.div 
+            {...fadeIn}
+            className="absolute bottom-0 right-0 w-[150%] md:w-[90%] lg:w-[70%] max-w-[1100px] h-[400px] md:h-[700px] pointer-events-none z-0"
+          >
             <img
               src="/assets/food2.jpg"
               alt="Ingredients and wine"
@@ -158,7 +161,7 @@ export default function Home() {
                 WebkitMaskComposite: 'source-in'
               }}
             />
-          </div>
+          </motion.div>
 
           <motion.div 
             {...fadeInUp}
@@ -217,7 +220,7 @@ export default function Home() {
               alt="Vintage Vespa"
               className="absolute inset-0 w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
           </motion.div>
         </section>
 
