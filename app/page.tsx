@@ -104,7 +104,7 @@ export default function Home() {
                   En Mancusi, no cortamos caminos. Nunca.
                 </p>
               </div>
-            </div>
+            </motion.div>
           </div>
         </section>
 
