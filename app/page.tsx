@@ -24,51 +24,54 @@ export default function Home() {
           <PizzaCanvas>
             <div className="flex items-end h-full w-full px-8 md:px-16 lg:px-24 pb-20 md:pb-32">
               <div className="flex flex-col items-start max-w-2xl">
-                <h1 className="font-title text-foreground text-4xl md:text-5xl lg:text-7xl leading-[1.05] tracking-tight">
+                <h1 className="font-title text-foreground text-[3.5rem] md:text-5xl lg:text-7xl leading-[1.05] tracking-tight drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)]">
                   Forno<br />
                   Napolitano,<br />
                   Sabor<br />
                   Authentico
                 </h1>
-                <div className="w-[60px] h-[2px] bg-amber mt-8" />
+                <div className="w-[60px] h-[2px] bg-amber mt-8 shadow-[0_2px_8px_rgba(0,0,0,0.6)]" />
               </div>
             </div>
           </PizzaCanvas>
         </section>
 
         {/* ═══ SECTION 2 — IL MANIFESTO ═══ */}
-        <section className="relative w-full min-h-screen mt-24 md:mt-40">
-          {/* Background image — full width, head preserved */}
-          <img
-            src="/assets/maradonna-2.jpg"
-            alt="Il Pizzaiolo — the craft behind every pizza"
-            className="absolute inset-0 w-full h-full object-cover"
-            style={{ objectPosition: "left 20%" }}
-          />
-          {/* Top gradient */}
-          <div
-            className="absolute inset-x-0 top-0 h-[35vh]"
-            style={{
-              background: "linear-gradient(to bottom, #0A0A0A 0%, rgba(10,10,10,0.7) 40%, transparent 100%)"
-            }}
-          />
-          {/* Bottom gradient */}
-          <div
-            className="absolute inset-x-0 bottom-0 h-[30vh]"
-            style={{
-              background: "linear-gradient(to top, #0A0A0A 0%, rgba(10,10,10,0.5) 50%, transparent 100%)"
-            }}
-          />
-          {/* Text overlay — RIGHT side */}
-          <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 min-h-screen items-center">
-            <div />
-            <div className="flex flex-col justify-center px-8 md:px-16 lg:px-20 pt-32 pb-16">
-              <h2 className="font-title text-foreground text-4xl md:text-5xl lg:text-[64px] tracking-tight leading-[1.1] mb-10">
+        <section className="relative w-full md:min-h-screen mt-24 md:mt-40 bg-[#0A0A0A] flex flex-col md:block">
+          {/* Background image — Mobile: displayed below text, Desktop: absolute full cover */}
+          <div className="order-2 md:order-none relative w-full h-[60vh] md:absolute md:inset-0 md:h-full">
+            <img
+              src="/assets/maradonna-2.jpg"
+              alt="Il Pizzaiolo — the craft behind every pizza"
+              className="absolute inset-0 w-full h-full object-cover"
+              style={{ objectPosition: "left 20%" }}
+            />
+            {/* Top gradient to blend smoothly on mobile and desktop */}
+            <div
+              className="absolute inset-x-0 top-0 h-[15vh] md:h-[35vh]"
+              style={{
+                background: "linear-gradient(to bottom, #0A0A0A 0%, rgba(10,10,10,0.7) 40%, transparent 100%)"
+              }}
+            />
+            {/* Bottom gradient */}
+            <div
+              className="absolute inset-x-0 bottom-0 h-[15vh] md:h-[30vh]"
+              style={{
+                background: "linear-gradient(to top, #0A0A0A 0%, rgba(10,10,10,0.5) 50%, transparent 100%)"
+              }}
+            />
+          </div>
+
+          {/* Text overlay — Mobile: top, Desktop: right side */}
+          <div className="order-1 md:order-none relative z-10 grid grid-cols-1 md:grid-cols-2 md:min-h-screen items-center">
+            <div className="hidden md:block" />
+            <div className="flex flex-col justify-center px-6 md:px-16 lg:px-20 pt-16 pb-8 md:pt-32 md:pb-16 bg-[#0A0A0A] md:bg-transparent">
+              <h2 className="font-title text-foreground text-5xl md:text-5xl lg:text-[64px] tracking-tight leading-[1.1] mb-10">
                 El Arte que<br />
                 no se aprende.<br />
                 Se Hereda.
               </h2>
-              <div className="border-l-2 border-amber/50 pl-8 max-w-md ml-8 md:ml-12">
+              <div className="border-l-2 border-amber/50 pl-6 md:pl-8 max-w-md ml-4 md:ml-12">
                 <p className="font-sans text-foreground/75 text-[15px] md:text-base leading-relaxed mb-4">
                   La pizza napolitana no es un plato. Es una declaración. Cada gesto del pizzaiolo
                   — el estirado a mano, el forno a 450°C, los 90 segundos de cocción exactos —
@@ -112,9 +115,9 @@ export default function Home() {
         </section>
 
         {/* ═══ SECTION 4 — IL MENÙ ═══ */}
-        <section id="menu" className="relative bg-background pt-8 pb-28 md:pb-36 px-6 md:px-12 lg:px-24 overflow-hidden">
+        <section id="menu" className="relative bg-background pt-8 pb-[350px] md:pb-36 px-6 md:px-12 lg:px-24 overflow-hidden">
           {/* Aesthetic Background Filler for the empty space next to the 7th pizza */}
-          <div className="absolute bottom-0 right-0 w-[135%] md:w-[90%] lg:w-[70%] max-w-[1100px] h-[700px] pointer-events-none z-0">
+          <div className="absolute bottom-0 right-0 w-[150%] md:w-[90%] lg:w-[70%] max-w-[1100px] h-[400px] md:h-[700px] pointer-events-none z-0">
             <img
               src="/assets/food2.jpg"
               alt="Ingredients and wine"
@@ -129,7 +132,7 @@ export default function Home() {
           </div>
 
           <div className="relative z-10 text-center mb-16 md:mb-20">
-            <h2 className="font-title text-foreground text-4xl md:text-6xl tracking-[0.08em] mb-6">
+            <h2 className="font-title text-foreground text-5xl md:text-6xl tracking-[0.08em] mb-6">
               Il Menù
             </h2>
             <div className="w-[60px] h-[1px] bg-amber mx-auto mb-6" />
