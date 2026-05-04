@@ -170,7 +170,7 @@ export default function Home() {
             <h2 className="font-title text-foreground text-5xl md:text-6xl tracking-[0.08em] mb-6">
               Il Menù
             </h2>
-            <div className="w-[60px] h-[1px] bg-amber mx-auto mb-6" />
+
             <p className="font-sans italic text-muted text-base">
               Una selección honesta. Sin artificios.
             </p>
