@@ -22,7 +22,7 @@ export default function Home() {
         {/* ═══ SECTION 1 — HERO ═══ */}
         <section id="hero">
           <PizzaCanvas>
-            <div className="flex items-end h-full w-full px-8 md:px-16 lg:px-24 pb-20 md:pb-32">
+            <div className="flex items-end h-full w-full px-8 md:px-16 lg:px-24 pb-[120px] md:pb-32">
               <div className="flex flex-col items-start max-w-2xl">
                 <h1 className="font-title text-foreground text-[3.5rem] md:text-5xl lg:text-7xl leading-[1.05] tracking-tight drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)]">
                   Forno<br />
@@ -37,7 +37,7 @@ export default function Home() {
         </section>
 
         {/* ═══ SECTION 2 — IL MANIFESTO ═══ */}
-        <section className="relative w-full md:min-h-screen mt-24 md:mt-40 bg-[#0A0A0A] flex flex-col md:block">
+        <section className="relative w-full md:min-h-screen mt-0 md:mt-40 bg-[#0A0A0A] flex flex-col md:block">
           {/* Background image — Mobile: displayed below text, Desktop: absolute full cover */}
           <div className="order-2 md:order-none relative w-full h-[85vh] md:absolute md:inset-0 md:h-full overflow-hidden">
             <img
@@ -65,7 +65,7 @@ export default function Home() {
           {/* Text overlay — Mobile: top, Desktop: right side */}
           <div className="order-1 md:order-none relative z-10 grid grid-cols-1 md:grid-cols-2 md:min-h-screen items-center">
             <div className="hidden md:block" />
-            <div className="flex flex-col justify-center px-6 md:px-16 lg:px-20 pt-16 pb-8 md:pt-32 md:pb-16 bg-[#0A0A0A] md:bg-transparent">
+            <div className="flex flex-col justify-center px-6 md:px-16 lg:px-20 pt-8 pb-32 md:pt-32 md:pb-16 bg-[#0A0A0A] md:bg-transparent">
               <h2 className="font-title text-foreground text-5xl md:text-5xl lg:text-[64px] tracking-tight leading-[1.1] mb-10">
                 El Arte que<br />
                 no se aprende.<br />
@@ -86,8 +86,8 @@ export default function Home() {
         </section>
 
         {/* ═══ SECTION 3 — LA PROMESA ═══ */}
-        <section className="bg-background w-full pt-12 pb-4 md:pt-16 md:pb-8 px-6 md:px-16 lg:px-24">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
+        <section className="bg-background w-full pt-32 pb-4 md:pt-16 md:pb-8 px-6 md:px-16 lg:px-24">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-16 items-center max-w-7xl mx-auto">
             {/* Left: Text */}
             <div className="flex flex-col justify-center">
               <h2 className="font-title text-foreground text-5xl md:text-6xl lg:text-[72px] tracking-tight leading-[1.05] mb-12">
