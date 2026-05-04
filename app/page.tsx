@@ -40,7 +40,7 @@ export default function Home() {
         <section id="hero">
           <PizzaCanvas>
             <div className="flex items-end h-full w-full px-8 md:px-16 lg:px-24 pb-[120px] md:pb-32">
-              <div className="flex flex-col items-start max-w-2xl">
+              <div className="flex flex-col items-start max-w-2xl bg-black/40 backdrop-blur-[2px] p-6 md:p-0 md:bg-transparent md:backdrop-blur-0 rounded-sm">
                 <h1 className="font-title text-foreground text-[3.5rem] md:text-5xl lg:text-7xl leading-[1.05] tracking-tight drop-shadow-[0_4px_20px_rgba(0,0,0,0.8)]">
                   Forno<br />
                   Napolitano,<br />
