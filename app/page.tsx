@@ -39,11 +39,11 @@ export default function Home() {
         {/* ═══ SECTION 2 — IL MANIFESTO ═══ */}
         <section className="relative w-full md:min-h-screen mt-24 md:mt-40 bg-[#0A0A0A] flex flex-col md:block">
           {/* Background image — Mobile: displayed below text, Desktop: absolute full cover */}
-          <div className="order-2 md:order-none relative w-full h-[60vh] md:absolute md:inset-0 md:h-full">
+          <div className="order-2 md:order-none relative w-full h-[85vh] md:absolute md:inset-0 md:h-full overflow-hidden">
             <img
               src="/assets/maradonna-2.jpg"
               alt="Il Pizzaiolo — the craft behind every pizza"
-              className="absolute inset-0 w-full h-full object-cover"
+              className="absolute inset-0 w-full h-full object-cover scale-[1.15] origin-[20%_center] md:scale-100 md:origin-center transition-transform duration-700"
               style={{ objectPosition: "left 20%" }}
             />
             {/* Top gradient to blend smoothly on mobile and desktop */}
