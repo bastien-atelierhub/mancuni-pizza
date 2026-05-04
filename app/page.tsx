@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import PizzaCanvas from "@/components/PizzaCanvas";
 import Navbar from "@/components/Navbar";
@@ -31,6 +32,14 @@ const menuItems = [
 
 
 export default function Home() {
+  useEffect(() => {
+    // Force scroll to top on mount to fix mobile jump bug
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Navbar />
